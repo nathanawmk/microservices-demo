@@ -1,0 +1,21 @@
+  - name: CrowdStrike Container Image Scan
+  # You may pin to the exact commit or the version.
+  # uses: CrowdStrike/container-image-scan-action@9c6b4d93605d9bb8b24462a381885cc3ce1a5188
+  uses: CrowdStrike/container-image-scan-action@v1
+  with:
+    # Your CrowdStrike OAUTH2 Client ID
+    falcon_client_id: 
+    # The container image to scan (e.g. my_image or myregistry.io/my_container)
+    container_repository: 
+    # The container tag to scan against (default: latest)
+    container_tag: # optional, default is latest
+    # The CrowdStrike Cloud region to submit for scanning (default: us-1)
+    crowdstrike_region: # optional, default is us-1
+    # Vulnerability score threshold
+    crowdstrike_score: # optional, default is 500
+    # Scan report download retries
+    retry_count: # optional, default is 10
+    # Set the logging level (default: INFO)
+    log_level: # optional, default is INFO
+    # Export JSON report to specified file (Default: None)
+    json_report: # optional
